@@ -1,0 +1,53 @@
+ng-query {
+	display: table;
+}
+ng-query .outer {
+	display: table-row;
+}
+ng-query .outer .cell {
+	display: table-cell;
+	padding-left: 10px;
+}
+ng-query .outer .tree-container {
+	display: table;
+}
+ng-query .outer .tree {
+	display: table-row;
+}
+ng-query div.segments {
+	display: table-cell;
+}
+ng-query div.separator {
+	display: table-cell;
+	margin-left: 10px;
+	width: 9px;
+	border-bottom: 1px solid #757575;
+	border-left: 1px solid #757575;
+	border-top: 1px solid #757575;
+}
+ng-query .outer .tree-container .cursor {
+	padding: 10px 5px;
+}
+ng-query .outer .tree-container .cursor button {
+	font-size: 12px;
+	height: 28px;
+	border-radius: 14px;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+ng-query .outer .tree-container .segment {
+	padding: 5px;
+}
+ng-query .outer .tree-container .segment button {
+	font-size: 12px;
+	height: 28px;
+	border-radius: 14px;
+	padding-left: 14px;
+	padding-right: 14px;
+}
+ng-query .outer .tree-container .segment .field-selector,
+ng-query .outer .tree-container .segment .field-operator,
+ng-query .outer .tree-container .segment .field-value {
+	display: inline-block;
+	width: 150px;
+}

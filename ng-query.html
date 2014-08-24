@@ -1,0 +1,41 @@
+<div class='outer'>
+	<div class='cell' style='vertical-align: middle;'>
+		<select ng-model='node.match'>
+			<option value='all'>Match All</option>
+			<option value='any'>Match Any</option>
+			<option value='none'>Match None</option>
+		</select>
+	</div>
+	<div class='cell'>
+		<div class='tree-container'>
+			<div class='tree'>
+				<div class='separator'></div>
+				<div class='segments'>
+					<div class='segment' ng-repeat='node in node.nodes'>
+						<div ng-if="node.field">
+							<button type='button' class='btn btn-danger' ng-click='removeFromParent(node.id, node.parent)'><span class='glyphicon glyphicon-minus' style='padding-bottom: 3px;'></span></button>
+							<select class='field-selector' ng-model='node.fieldName'>
+								<option value='1'>Field 1</option>
+								<option value='2'>Field 2</option>
+								<option value='3'>Field 3</option>
+							</select>
+							<select class='field-operator' ng-model='node.operator'>
+								<option value='startsWith'>starts with</option>
+								<option value='endsWith'>ends with</option>
+								<option value='equals'>equals</option>
+							</select>
+							<input type='text' class='form-control field-value' ng-model='node.value'>
+						</div>
+						<div ng-if="node.tree">
+							<ng-include src="'ng-query.html'"></ng-include>
+						</div>
+					</div>
+					<div class='cursor'>
+						<button type='button' class='btn btn-success' ng-click='addField(node)'><span class='glyphicon glyphicon-plus' style='padding-bottom: 3px;'></span></button>
+						<button type='button' class='btn btn-default' ng-click='addTree(node)'><span class='glyphicon glyphicon-plus' style='padding-bottom: 3px;'></span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
